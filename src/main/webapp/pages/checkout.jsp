@@ -1,20 +1,21 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="../assets/images/favicon.png">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
 
 		<!-- Bootstrap CSS -->
-		<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../assets/css/bootstrap.min.css/?version=1" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-		<link href="../assets/css/tiny-slider.css" rel="stylesheet">
-		<link href="../assets/css/page.css" rel="stylesheet">
+		<link href="../assets/css/tiny-slider.css/?version=1" rel="stylesheet">
+		<link href="../assets/css/page.css/?version=1" rel="stylesheet">
 		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
 	</head>
 
@@ -270,7 +271,7 @@
 
 		                  <div class="collapse" id="collapsebank">
 		                    <div class="py-2">
-		                      <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+		                      <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wonât be shipped until the funds have cleared in our account.</p>
 		                    </div>
 		                  </div>
 		                </div>
@@ -280,7 +281,7 @@
 
 		                  <div class="collapse" id="collapsecheque">
 		                    <div class="py-2">
-		                      <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+		                      <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wonât be shipped until the funds have cleared in our account.</p>
 		                    </div>
 		                  </div>
 		                </div>
@@ -290,13 +291,13 @@
 
 		                  <div class="collapse" id="collapsepaypal">
 		                    <div class="py-2">
-		                      <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+		                      <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wonât be shipped until the funds have cleared in our account.</p>
 		                    </div>
 		                  </div>
 		                </div>
 
 		                <div class="form-group">
-		                  <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='thankyou.html'">Place Order</button>
+		                  <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='thankyou.jsp'">Place Order</button>
 		                </div>
 
 		              </div>

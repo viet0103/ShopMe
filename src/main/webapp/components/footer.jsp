@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/css/bootstrap.min.css?version=1" rel="stylesheet">
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 	rel="stylesheet">
-<link href="../assets/css/tiny-slider.css" rel="stylesheet">
-<link href="../assets/css/page.css" rel="stylesheet">
+<link href="../assets/css/tiny-slider.css?version=1" rel="stylesheet">
+<link href="../assets/css/page.css?version=1" rel="stylesheet">
 
 
 </head>

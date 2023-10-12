@@ -11,8 +11,8 @@
 
 
 <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/css/tiny-slider.css" rel="stylesheet">
-<link href="../assets/css/page.css" rel="stylesheet">
+<link href="../assets/css/tiny-slider.css?version=1" rel="stylesheet">
+<link href="../assets/css/page.css?version=1" rel="stylesheet">
 
 </head>
 <body>
@@ -25,6 +25,7 @@
 	%>
 	<nav
 		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+		style="position: fixed;top: 0; left: 0; right: 0;height: 84px; z-index: 5" 
 		aria-label="Furni navigation bar">
 
 		<div class="container">
@@ -33,11 +34,13 @@
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
 				aria-controls="navbarsFurni" aria-expanded="false"
-				aria-label="Toggle navigation">
+				aria-label="Toggle navigation"
+				onclick="document.getElementById(navbarsFurni)?.classList.toggle('show')"
+				>
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarsFurni">
+			<div class="collapse navbar-collapse" id="navbarsFurni" style="">
 				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 					<li
 						class="nav-item <%=currentPage.equals("index.jsp") ? "active" : ""%> "><a
@@ -97,7 +100,7 @@
 		</div>
 	</div>
 
-	<script src="../assets/js/bootstrap.bundle.min.js"></script>
+	
 	<script src="../assets/js/tiny-slider.js"></script>
 	<script src="../assets/js/custom.js"></script>
 
