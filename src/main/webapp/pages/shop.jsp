@@ -7,7 +7,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Untree.co">
-<link rel="shortcut icon" href="../assets/images/favicon.png">
+<link rel="shortcut icon" href="<%=request.getContextPath()%>/assets/images/favicon.png">
 
 <meta name="description" content="" />
 <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -17,14 +17,14 @@
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 	rel="stylesheet">
-<link href="../assets/css/tiny-slider.css" rel="stylesheet">
-<link href="../assets/css/page.css?version=1" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/assets/css/tiny-slider.css" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/assets/css/page.css?version=1" rel="stylesheet">
 <title>Furni Free Bootstrap 5 Template for Furniture and
 	Interior Design Websites by Untree.co</title>
 </head>
 
 <body>
-
+	<%String id = request.getParameter("id"); %>
 	<!-- Start Header/Navigation -->
 	<jsp:include page="../components/header.jsp"></jsp:include>
 	<!-- End Header/Navigation -->
@@ -35,7 +35,7 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-5">
 					<div class="intro-excerpt">
-						<h1>Shop</h1>
+						<h1><%=id %></h1>
 					</div>
 				</div>
 				<div class="col-lg-7"></div>
@@ -123,7 +123,7 @@
 					<section
 						style="display: flex; align-items: center; margin-bottom: 10px">
 						<input type="checkbox" class="checkbox-input" name="5" id="5">
-						<label for="5" style="display: flex;; margin-left: 10px">
+						<label for="5" style="display: flex; margin-left: 10px">
 							<svg class="star" xmlns="http://www.w3.org/2000/svg" height="1em"
 								viewBox="0 0 576 512">
 								<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -269,7 +269,7 @@
 					<section
 						style="display: flex; align-items: center; margin-bottom: 10px">
 						<input type="checkbox" class="checkbox-input" name="2" id="2">
-						<label for="2" style="display: flex;; margin-left: 10px">
+						<label for="2" style="display: flex; margin-left: 10px">
 
 							<svg class="star" xmlns="http://www.w3.org/2000/svg" height="1em"
 								viewBox="0 0 576 512">
@@ -319,7 +319,7 @@
 	
 				<div style="width: 100%; display: flex;justify-content: center;margin-top: 40px">
 				<div
-					style="width: 150px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: #3b5d50; color: #fff;  cursor: pointer; font-weight: 600;">
+					style="width: 100%; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: #3b5d50; color: #fff;  cursor: pointer; font-weight: 600;">
 					Filter
 					<svg class="filter-icon" xmlns="http://www.w3.org/2000/svg"
 						height="1.5em" viewBox="0 0 512 512">
@@ -342,11 +342,11 @@
 				<!-- Start Column 1 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="../assets/images/product-3.png"
+						src="<%=request.getContextPath()%>/assets/images/product-3.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3> <strong
 						class="product-price">$50.00</strong> <span class="icon-cross">
-							<img src="../assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -355,11 +355,11 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="../assets/images/product-6.png"
+						src="<%=request.getContextPath()%>/assets/images/product-6.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3> <strong
 						class="product-price">$50.00</strong> <span class="icon-cross">
-							<img src="../assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -368,11 +368,11 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="../assets/images/product-2.png"
+						src="<%=request.getContextPath()%>/assets/images/product-2.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Kruzo Aero Chair</h3> <strong
 						class="product-price">$78.00</strong> <span class="icon-cross">
-							<img src="../assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -381,11 +381,11 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="../assets/images/product-3.png"
+						src="<%=request.getContextPath()%>/assets/images/product-3.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Ergonomic Chair</h3> <strong
 						class="product-price">$43.00</strong> <span class="icon-cross">
-							<img src="../assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -395,11 +395,11 @@
 				<!-- Start Column 1 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="../assets/images/product-3.png"
+						src="<%=request.getContextPath()%>/assets/images/product-3.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3> <strong
 						class="product-price">$50.00</strong> <span class="icon-cross">
-							<img src="../assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -408,11 +408,11 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="../assets/images/product-1.png"
+						src="<%=request.getContextPath()%>/assets/images/product-1.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3> <strong
 						class="product-price">$50.00</strong> <span class="icon-cross">
-							<img src="../assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -421,11 +421,11 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="../assets/images/product-2.png"
+						src="<%=request.getContextPath()%>/assets/images/product-2.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Kruzo Aero Chair</h3> <strong
 						class="product-price">$78.00</strong> <span class="icon-cross">
-							<img src="../assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -434,11 +434,11 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="../assets/images/product-3.png"
+						src="<%=request.getContextPath()%>/assets/images/product-3.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Ergonomic Chair</h3> <strong
 						class="product-price">$43.00</strong> <span class="icon-cross">
-							<img src="../assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -454,9 +454,9 @@
 	<!-- End Footer Section -->
 
 
-	<script src="../assets/js/bootstrap.bundle.min.js"></script>
-	<script src="../assets/js/tiny-slider.js"></script>
-	<script src="../assets/js/custom.js"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/tiny-slider.js"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
 	<script type="text/javascript">
 	const selected = document.querySelector(".selected");
 	const optionsContainer = document.querySelector(".options-container");

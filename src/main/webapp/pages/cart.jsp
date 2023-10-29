@@ -6,16 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="../assets/../assets/images/favicon.png">
+  <link rel="shortcut icon" href="<%=request.getContextPath()%>/assets//ShopMe/assets/images/favicon.png">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
 
 		<!-- Bootstrap CSS -->
-		<link href="../assets/css/bootstrap.min.css/?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css/?version=1" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-		<link href="../assets/css/tiny-slider.css/?version=1" rel="stylesheet">
-		<link href="../assets/css/page.css/?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/tiny-slider.css/?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/page.css/?version=1" rel="stylesheet">
 		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
 	</head>
 
@@ -63,7 +63,7 @@
                       <tbody>
                         <tr>
                           <td class="product-thumbnail">
-                            <img src="../assets/images/product-5.png" alt="Image" class="img-fluid">
+                            <img src="<%=request.getContextPath()%>/assets/images/product-5.png" alt="Image" class="img-fluid">
                           </td>
                           <td class="product-name">
                             <h2 class="h5 text-black">Product 1</h2>
@@ -87,7 +87,7 @@
         
                         <tr>
                           <td class="product-thumbnail">
-                            <img src="../assets/images/product-2.png" alt="Image" class="img-fluid">
+                            <img src="<%=request.getContextPath()%>/assets/images/product-2.png" alt="Image" class="img-fluid">
                           </td>
                           <td class="product-name">
                             <h2 class="h5 text-black">Product 2</h2>
@@ -164,7 +164,7 @@
         
                       <div class="row">
                         <div class="col-md-12">
-                          <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='../pages/checkout.jsp'">Proceed To Checkout</button>
+                          <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='/ShopMe/pages/checkout.jsp'">Proceed To Checkout</button>
                         </div>
                       </div>
                     </div>
@@ -180,9 +180,9 @@
 		<!-- End Footer Section -->	
 
 
-		<script src="../assets/js/bootstrap.bundle.min.js"></script>
-		<script src="../assets/js/tiny-slider.js"></script>
-		<script src="../assets/js/custom.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/bootstrap.bundle.min.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/tiny-slider.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
 	</body>
 
 </html>

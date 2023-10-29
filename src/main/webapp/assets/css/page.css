@@ -1263,6 +1263,7 @@ shop detail css
 
 .bg-main {
     background-color: var(--main-bg-color);
+    margin-top: 84px;
 }
 
 .text-red {
@@ -2120,7 +2121,7 @@ footer ul li {
 
 .btn-view-description {
     position: absolute;
-    bottom: -60px;
+    bottom: -120px;
     left: 50%;
     transform: translateX(-50%);
 }

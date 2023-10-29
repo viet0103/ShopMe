@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="../assets/css/bootstrap.min.css?version=1" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css?version=1" rel="stylesheet">
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 	rel="stylesheet">
-<link href="../assets/css/tiny-slider.css?version=1" rel="stylesheet">
-<link href="../assets/css/page.css?version=1" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/assets/css/tiny-slider.css?version=1" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/assets/css/page.css?version=1" rel="stylesheet">
 
 
 </head>
@@ -18,7 +18,7 @@
 		<div class="container relative">
 
 			<div class="sofa-img">
-				<img src="../assets/images/sofa.png" alt="Image" class="img-fluid">
+				<img src="<%=request.getContextPath()%>/assets/images/sofa.png" alt="Image" class="img-fluid">
 			</div>
 
 			<div class="row">
@@ -26,7 +26,7 @@
 					<div class="subscription-form">
 						<h3 class="d-flex align-items-center">
 							<span class="me-1"><img
-								src="../assets/images/envelope-outline.svg" alt="Image"
+								src="<%=request.getContextPath()%>/assets/images/envelope-outline.svg" alt="Image"
 								class="img-fluid"></span><span>Subscribe to Newsletter</span>
 						</h3>
 

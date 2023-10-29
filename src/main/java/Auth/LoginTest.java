@@ -19,14 +19,14 @@ import jakarta.servlet.http.HttpServletResponse;
  * @param <E>
  */
 
-@WebServlet("/register")
-public class Login<E> extends HttpServlet {
+@WebServlet("/loginTest")
+public class LoginTest<E> extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public LoginTest() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,7 +37,8 @@ public class Login<E> extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee_directory", "root", "nhv21092003@");
@@ -58,11 +59,17 @@ public class Login<E> extends HttpServlet {
 				}
 
 			}
+			request.getRequestDispatcher("/pages/index.jsp").forward(request, response);
+			
+		 	
 
 		} catch (Exception e) {
 			// TODO: handle exception
+			System.out.println("Connect db has problem");
 			System.out.println(e);
 		}
+		
+		
 	}
 
 	/**
@@ -72,8 +79,8 @@ public class Login<E> extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setAttribute("status", "failed");
-		RequestDispatcher dispatcher = request.getRequestDispatcher("registration.jsp");
-		dispatcher.include(request, response);
+		
+		request.getRequestDispatcher("/pages/registration.jsp").include(request, response);
 	}
 
 }

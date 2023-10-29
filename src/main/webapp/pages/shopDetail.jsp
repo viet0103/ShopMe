@@ -6,20 +6,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="../assets/images/favicon.png">
+  <link rel="shortcut icon" href="<%=request.getContextPath()%>/assets/images/favicon.png">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
 
 		<!-- Bootstrap CSS -->
-		<link href="../assets/css/bootstrap.min.css?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css?version=1" rel="stylesheet">
 		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-		<link href="../assets/css/tiny-slider.css?version=1" rel="stylesheet">
-		<link href="../assets/css/page.css?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/tiny-slider.css?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/page.css?version=1" rel="stylesheet">
 		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
 	</head>
 	<body>
+	
+	<%String id = (String) request.getAttribute("product-id"); %>
 
 		<!-- Start Header/Navigation -->
 		<jsp:include page="../components/header.jsp"></jsp:include>
@@ -30,7 +32,7 @@
         <div class="container">
             <div class="box">
                 <div class="breadcumb">
-                    <a href="./index.html">home</a>
+                    <a href="./index.jsp">home</a>
                     <span><i class='bx bxs-chevrons-right'></i></span>
                     <a href="./products.html">all products</a>
                     <span><i class='bx bxs-chevrons-right'></i></span>
@@ -40,18 +42,18 @@
             <div class="row product-row">
                 <div class="col-12 col-lg-5">
                     <div class="product-img" id="product-img">
-                        <img src="../assets/images/product-1.png" alt="">
+                        <img src="<%=request.getContextPath()%>/assets/images/product-1.png" alt="">
                     </div>
                     <div class="box">
                         <div class="product-img-list">
                             <div class="product-img-item">
-                                <img src="../assets/images/product-1.png" alt="">
+                                <img src="<%=request.getContextPath()%>/assets/images/product-1.png" alt="">
                             </div>
                             <div class="product-img-item">
-                                <img src="../assets/images/product-1.png" alt="">
+                                <img src="<%=request.getContextPath()%>/assets/images/product-1.png" alt="">
                             </div>
                             <div class="product-img-item">
-                                <img src="../assets/images/product-1.png" alt="">
+                                <img src="<%=request.getContextPath()%>/assets/images/product-1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -59,7 +61,7 @@
                 <div class="col-12 col-lg-7">
                     <div class="product-info">
                         <h1>
-                            JBL TUNE 750TNC
+                            <%=id %>
                         </h1>
                         <div class="product-info-detail">
                             <span class="product-info-detail-title">Brand:</span>
@@ -112,7 +114,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusantium officia, quae fuga in exercitationem aliquam labore ex doloribus repellendus beatae facilis ipsam. Veritatis vero obcaecati iste atque aspernatur ducimus.
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quam praesentium id sit amet magnam ad, dolorum, cumque iste optio itaque expedita eius similique, ab adipisci dicta. Quod, quibusdam quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, in corrupti ipsam sint error possimus commodi incidunt suscipit sit voluptatum quibusdam enim eligendi animi deserunt recusandae earum natus voluptas blanditiis?
                         </p>
-                        <img src="../assets/images/product-2.png" alt="">
+                        <img src="<%=request.getContextPath()%>/assets/images/product-2.png" alt="">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ullam quam fugit veniam ipsum recusandae incidunt, ex ratione, magnam labore ad tenetur officia! In, totam. Molestias sapiente deserunt animi porro?
                         </p>
@@ -250,13 +252,13 @@
 		
 
 		<!-- Start Footer Section -->
-		<jsp:include page="../components/footer.jsp"></jsp:include>
+		<jsp:include page="../components/footer.jsp" ></jsp:include>
 		<!-- End Footer Section -->	
 
 
-		<script src="../assets/js/bootstrap.bundle.min.js"></script>
-		<script src="../assets/js/tiny-slider.js"></script>
-		<script src="../assets/js/custom.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/bootstrap.bundle.min.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/tiny-slider.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
 		<script type="text/javascript">
 		document.querySelectorAll('.product-img-item').forEach(e => {
 		    e.addEventListener('click', () => {
