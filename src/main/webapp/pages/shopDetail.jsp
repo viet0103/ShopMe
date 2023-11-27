@@ -1,28 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="<%=request.getContextPath()%>/assets/images/favicon.png">
+  <link rel="shortcut icon" href="${pageContext.request.contextPath }/assets/images/favicon.png">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
 
 		<!-- Bootstrap CSS -->
-		<link href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css?version=1" rel="stylesheet">
+		<link href="${pageContext.request.contextPath }/assets/css/bootstrap.min.css?version=1" rel="stylesheet">
 		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-		<link href="<%=request.getContextPath()%>/assets/css/tiny-slider.css?version=1" rel="stylesheet">
-		<link href="<%=request.getContextPath()%>/assets/css/page.css?version=1" rel="stylesheet">
+		<link href="${pageContext.request.contextPath }/assets/css/tiny-slider.css?version=1" rel="stylesheet">
+		<link href="${pageContext.request.contextPath }/assets/css/page.css?version=1" rel="stylesheet">
 		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
 	</head>
 	<body>
-	
-	<%String id = (String) request.getAttribute("product-id"); %>
-
+		<c:set var="product_id" value="${param.id }"/>
+		
+		
 		<!-- Start Header/Navigation -->
 		<jsp:include page="../components/header.jsp"></jsp:include>
 		<!-- End Header/Navigation -->
@@ -42,18 +43,18 @@
             <div class="row product-row">
                 <div class="col-12 col-lg-5">
                     <div class="product-img" id="product-img">
-                        <img src="<%=request.getContextPath()%>/assets/images/product-1.png" alt="">
+                        <img src="${pageContext.request.contextPath }/assets/images/product-1.png" alt="">
                     </div>
                     <div class="box">
                         <div class="product-img-list">
                             <div class="product-img-item">
-                                <img src="<%=request.getContextPath()%>/assets/images/product-1.png" alt="">
+                                <img src="${pageContext.request.contextPath }/assets/images/product-1.png" alt="">
                             </div>
                             <div class="product-img-item">
-                                <img src="<%=request.getContextPath()%>/assets/images/product-1.png" alt="">
+                                <img src="${pageContext.request.contextPath }/assets/images/product-1.png" alt="">
                             </div>
                             <div class="product-img-item">
-                                <img src="<%=request.getContextPath()%>/assets/images/product-1.png" alt="">
+                                <img src="${pageContext.request.contextPath }/assets/images/product-1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -61,7 +62,7 @@
                 <div class="col-12 col-lg-7">
                     <div class="product-info">
                         <h1>
-                            <%=id %>
+                            ${product_id } 
                         </h1>
                         <div class="product-info-detail">
                             <span class="product-info-detail-title">Brand:</span>
@@ -114,13 +115,19 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusantium officia, quae fuga in exercitationem aliquam labore ex doloribus repellendus beatae facilis ipsam. Veritatis vero obcaecati iste atque aspernatur ducimus.
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quam praesentium id sit amet magnam ad, dolorum, cumque iste optio itaque expedita eius similique, ab adipisci dicta. Quod, quibusdam quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, in corrupti ipsam sint error possimus commodi incidunt suscipit sit voluptatum quibusdam enim eligendi animi deserunt recusandae earum natus voluptas blanditiis?
                         </p>
-                        <img src="<%=request.getContextPath()%>/assets/images/product-2.png" alt="">
+                        <img src="${pageContext.request.contextPath }/assets/images/product-2.png" alt="">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ullam quam fugit veniam ipsum recusandae incidunt, ex ratione, magnam labore ad tenetur officia! In, totam. Molestias sapiente deserunt animi porro?
                         </p>
                     </div>
                 </div>
             </div>
+            <div>
+            		
+                	<jsp:include page="../components/comment.jsp">
+						<jsp:param value="${product_id }" name="product_id" />
+					</jsp:include>
+                </div>
             <div class="box">
                 <div class="box-header">
                     review
@@ -153,52 +160,12 @@
                             </div>
                             <div class="user-name">
                                 <span class="name">tuat tran anh</span>
-                                <span class="rating">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="user-rate-content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea iste, veritatis nobis amet illum, cum alias magni dolores odio, eius quo excepturi veniam ipsa voluptatibus natus voluptas vero? Aspernatur!
-                        </div>
-                    </div>
-                    <div class="user-rate">
-                        <div class="user-info">
-                            <div class="user-avt">
-                                <img src="./images/tuat.jpg" alt="">
-                            </div>
-                            <div class="user-name">
-                                <span class="name">tuat tran anh</span>
-                                <span class="rating">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="user-rate-content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea iste, veritatis nobis amet illum, cum alias magni dolores odio, eius quo excepturi veniam ipsa voluptatibus natus voluptas vero? Aspernatur!
-                        </div>
-                    </div>
-                    <div class="user-rate">
-                        <div class="user-info">
-                            <div class="user-avt">
-                                <img src="./images/tuat.jpg" alt="">
-                            </div>
-                            <div class="user-name">
-                                <span class="name">tuat tran anh</span>
-                                <span class="rating">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
+                                <span class="rating" id="stars">
+                                    <i class='bx bxs-star star'></i>
+                                    <i class='bx bxs-star star'></i>
+                                    <i class='bx bxs-star star'></i>
+                                    <i class='bx bxs-star star'></i>
+                                    <i class='bx bxs-star star'></i>
                                 </span>
                             </div>
                         </div>
@@ -256,9 +223,9 @@
 		<!-- End Footer Section -->	
 
 
-		<script src="<%=request.getContextPath()%>/assets/js/bootstrap.bundle.min.js"></script>
-		<script src="<%=request.getContextPath()%>/assets/js/tiny-slider.js"></script>
-		<script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
+		<script src="${pageContext.request.contextPath }/assets/js/bootstrap.bundle.min.js"></script>
+		<script src="${pageContext.request.contextPath }/assets/js/tiny-slider.js"></script>
+		<script src="${pageContext.request.contextPath }/assets/js/custom.js"></script>
 		<script type="text/javascript">
 		document.querySelectorAll('.product-img-item').forEach(e => {
 		    e.addEventListener('click', () => {

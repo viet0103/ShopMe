@@ -9,9 +9,14 @@ public class DBConnection {
 	public DBConnection() {
 		if (connection==null) {
 			try {
-				Class.forName("com.mysql.cj.jdbc.Driver");
-				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdb", "root", "nhv21092003@");
-
+				Class.forName("com.mysql.cj.jdbc.Driver");// Đăng ký trình điều khiển JDBC cho MySQL
+				/**
+				 * "jdbc:mysql://localhost:3306/shopdb": URL thiết lập kết nối đến cơ sở dữ liệu MySQL
+				 * "root": tên người dùng
+				 * "nhv21092003@": mật khẩu.
+				 * **/
+				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdb", "root", "quynhlieu01#");
+//				System.out.println(connection);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

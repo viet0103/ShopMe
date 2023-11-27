@@ -14,6 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
@@ -59,14 +60,14 @@ public class Register extends HttpServlet {
 		String user_pass = request.getParameter("pass");
 		String user_re__pass = request.getParameter("re_pass");
 		String password = BCrypt.hashpw(user_pass, BCrypt.gensalt());
-		
+		String created_date = (new SimpleDateFormat("yyyy-MM-dd")).format(new Date());
 		 
 		
 		try {
 			
 			PreparedStatement statement;
 			
-			String check_exist_user = "select * from customer where email=? or phone=?";
+			String check_exist_user = "select * from customers where email=? or phone=?";
 			
 			statement = DBConnection.connection.prepareStatement(check_exist_user,ResultSet.TYPE_SCROLL_SENSITIVE, 
                     ResultSet.CONCUR_UPDATABLE);
@@ -97,15 +98,15 @@ public class Register extends HttpServlet {
 				request.setAttribute("lastName", lastName);
 				request.setAttribute("email", email);
 				request.setAttribute("phone", phone);
-				request.setAttribute("date", date);
+				request.setAttribute("date", created_date);
 				request.setAttribute("pass", user_pass);
 				request.setAttribute("re_pass", user_re__pass);
 				doGet(request, response);
 			}
 			else {
 				
-				String register_sql = "insert into  customer (passwd, first_name, last_name,email, phone, dob)\r\n"
-						+ "values (?,?,?,?,?,?);";
+				String register_sql = "insert into customers (passwd, first_name, last_name, email, phone, date_of_birth, created_date)\r\n"
+						+ "values (?,?,?,?,?,?,?);";
 				
 				
 				statement = DBConnection.connection.prepareStatement(register_sql);
@@ -116,6 +117,7 @@ public class Register extends HttpServlet {
 				statement.setString(4, email);
 				statement.setString(5, phone);
 				statement.setString(6, date);
+				statement.setString(7, created_date);
 				
 				int update_success = statement.executeUpdate();
 				
@@ -132,7 +134,7 @@ public class Register extends HttpServlet {
 					request.setAttribute("lastName", lastName);
 					request.setAttribute("email", email);
 					request.setAttribute("phone", phone);
-					request.setAttribute("date", date);
+					request.setAttribute("date", created_date);
 					request.setAttribute("pass", user_pass);
 					request.setAttribute("re_pass", user_re__pass);
 					

@@ -45,7 +45,7 @@
 						<h2 class="form-title">Sign up</h2>
 
 						<form method="post"
-							action="<%=request.getContextPath()%>/register"
+							action="${pageContext.request.contextPath }/register"
 							class="register-form" id="register-form">
 							<div class="form-group" style="display: flex">
 								<label for="firstName"><i
@@ -94,8 +94,8 @@
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
 									onblur="handleOnBlur(this)" onfocus="handleOnFocus(this)"
 									required type="password" name="pass" id="pass"
-									placeholder="Password" value="<%=pass != null ? pass : ""%>" /> <input
-									style="display: none" type="checkbox" name="show_pass"
+									placeholder="Password" value="<%=pass != null ? pass : ""%>" /> 
+									<input style="display: none" type="checkbox" name="show_pass"
 									id="show_pass" /> <label for="show_pass" class="show-pass"
 									onclick="handleShowPass(this)"> <svg
 										xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -204,13 +204,9 @@
 		submitForm.onsubmit = (e) => {
 			e.preventDefault();
 			
-			
 			//Validate
-			
-			
-			
-			const isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value);
-			const isValidPhoneNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phone_number.value);
+			const isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value);// Kiem tra chuoi co phai dang chuan email khong?
+			const isValidPhoneNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phone_number.value);// Kiem tra chuoi co phai dang chuan phone number khong?
 			const isValidPass = pass.value.length > 5;
 			const isMatchPass = pass.value === re_pass.value;
 			
