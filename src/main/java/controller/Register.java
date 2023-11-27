@@ -92,7 +92,6 @@ public class Register extends HttpServlet {
 				}
 				result.previous();
 				
-				System.out.println("user exist");
 				
 				request.setAttribute("firstName", firstName);
 				request.setAttribute("lastName", lastName);

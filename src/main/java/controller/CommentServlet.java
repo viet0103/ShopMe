@@ -45,7 +45,6 @@ public class CommentServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		String id =  request.getParameter("product_id");
-		System.out.println("Vao day lay product_id: " +id );
 		request.getRequestDispatcher("/login?id="+id).forward(request, response);
 	}
 

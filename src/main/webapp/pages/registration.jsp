@@ -8,16 +8,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="shortcut icon"
-	href="<%=request.getContextPath()%>/assets/images/favicon.png?version=1">
+	href="${pageContext.request.contextPath }/assets/images/favicon.png?version=1">
 <title>Sign Up Form by Colorlib</title>
 
 <!-- Font Icon -->
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/fonts/material-icon/css/material-design-iconic-font.min.css?version=1">
+	href="${pageContext.request.contextPath }/assets/fonts/material-icon/css/material-design-iconic-font.min.css?version=1">
 
 <!-- Main css -->
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/css/auth.css?version=1">
+	href="${pageContext.request.contextPath }/assets/css/auth.css?version=1">
 <link rel="stylesheet" href="alert/dist/sweetalert.css">
 </head>
 <body>
@@ -151,10 +151,10 @@
 					<div class="signup-image">
 						<figure>
 							<img
-								src="<%=request.getContextPath()%>/assets/images/signup-image.jpg"
+								src="${pageContext.request.contextPath }/assets/images/signup-image.jpg"
 								alt="sing up image">
 						</figure>
-						<a href="<%=request.getContextPath()%>/login"
+						<a href="${pageContext.request.contextPath }/login"
 							class="signup-image-link">I am already member</a>
 					</div>
 				</div>

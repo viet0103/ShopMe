@@ -35,6 +35,7 @@
 	                    <span class="text-capitalize h5 col-2">${user == null?"User":(user.getFullname() )}</span>
 	                    <div class="rating col-10" id="starRating"  style="transform: translateX(-13%);">
 	                        <input type="number" name="rating" hidden id="rating" value="${not empty param.rating?param.rating:0 }">
+	                        	<script type="text/javascript">setRatingStars(${not empty param.rating?param.rating:0 });</script>
 		                        <i class='bx bx-star star' style="--i: 0;"></i>	
 		                        <i class='bx bx-star star' style="--i: 1;"></i>
 		                        <i class='bx bx-star star' style="--i: 2;"></i>

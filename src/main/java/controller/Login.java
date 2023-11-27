@@ -47,7 +47,6 @@ public class Login extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String product_id = request.getParameter("product_id");
-		System.out.println("product id : "+product_id);
 		String rating = request.getParameter("rating");
 		String content_comment = request.getParameter("content-comment");
 		request.setAttribute("rating",rating);
@@ -72,7 +71,6 @@ public class Login extends HttpServlet {
 		String rating = request.getParameter("rating");
 		String content_comment = request.getParameter("content_comment");
 		
-		System.out.println("do post: "+product_id);
 		try {
 			String sql = "select * from customers where email=? or phone=?";
 			PreparedStatement statement = DBConnection.connection.prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, 
