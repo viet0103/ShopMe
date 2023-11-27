@@ -27,9 +27,9 @@ public class ProductDetail extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setAttribute("product-id", request.getParameter("id"));
-		request.getRequestDispatcher("/pages/shopDetail.jsp").forward(request, response);;
-	}
+		String id = request.getParameter("id");
+		request.setAttribute("product_id", id);
+		request.getRequestDispatcher("/pages/shopDetail.jsp").forward(request, response);	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

@@ -10,7 +10,7 @@ public class DBConnection {
 		if (connection==null) {
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
-				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdb", "root", "nhv21092003@");
+				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdb", "root", "quynhlieu01#");
 
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
