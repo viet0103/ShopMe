@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="Model.User"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,7 +30,7 @@
 </head>
 
 <body>
-
+	<!-- End cookie -->
 	<!-- Start Header/Navigation -->
 	<jsp:include page="../components/header.jsp"></jsp:include>
 	<!-- End Header/Navigation -->
@@ -77,7 +78,7 @@
 						Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor
 						tempor tristique.</p>
 					<p>
-						<a href="shop.html" class="btn">Explore</a>
+						<a href="shop.jsp" class="btn">Explore</a>
 					</p>
 				</div>
 				<!-- End Column 1 -->

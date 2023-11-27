@@ -8,16 +8,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="shortcut icon"
-	href="<%=request.getContextPath()%>/assets/images/favicon.png?version=1">
+	href="${pageContext.request.contextPath }/assets/images/favicon.png?version=1">
 <title>Sign Up Form by Colorlib</title>
 
 <!-- Font Icon -->
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/fonts/material-icon/css/material-design-iconic-font.min.css?version=1">
+	href="${pageContext.request.contextPath }/assets/fonts/material-icon/css/material-design-iconic-font.min.css?version=1">
 
 <!-- Main css -->
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/assets/css/auth.css?version=1">
+	href="${pageContext.request.contextPath }/assets/css/auth.css?version=1">
 <link rel="stylesheet" href="alert/dist/sweetalert.css">
 </head>
 <body>
@@ -45,7 +45,7 @@
 						<h2 class="form-title">Sign up</h2>
 
 						<form method="post"
-							action="<%=request.getContextPath()%>/register"
+							action="${pageContext.request.contextPath }/register"
 							class="register-form" id="register-form">
 							<div class="form-group" style="display: flex">
 								<label for="firstName"><i
@@ -94,8 +94,8 @@
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
 									onblur="handleOnBlur(this)" onfocus="handleOnFocus(this)"
 									required type="password" name="pass" id="pass"
-									placeholder="Password" value="<%=pass != null ? pass : ""%>" /> <input
-									style="display: none" type="checkbox" name="show_pass"
+									placeholder="Password" value="<%=pass != null ? pass : ""%>" /> 
+									<input style="display: none" type="checkbox" name="show_pass"
 									id="show_pass" /> <label for="show_pass" class="show-pass"
 									onclick="handleShowPass(this)"> <svg
 										xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -151,10 +151,10 @@
 					<div class="signup-image">
 						<figure>
 							<img
-								src="<%=request.getContextPath()%>/assets/images/signup-image.jpg"
+								src="${pageContext.request.contextPath }/assets/images/signup-image.jpg"
 								alt="sing up image">
 						</figure>
-						<a href="<%=request.getContextPath()%>/login"
+						<a href="${pageContext.request.contextPath }/login"
 							class="signup-image-link">I am already member</a>
 					</div>
 				</div>
@@ -204,13 +204,9 @@
 		submitForm.onsubmit = (e) => {
 			e.preventDefault();
 			
-			
 			//Validate
-			
-			
-			
-			const isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value);
-			const isValidPhoneNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phone_number.value);
+			const isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value);// Kiem tra chuoi co phai dang chuan email khong?
+			const isValidPhoneNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phone_number.value);// Kiem tra chuoi co phai dang chuan phone number khong?
 			const isValidPass = pass.value.length > 5;
 			const isMatchPass = pass.value === re_pass.value;
 			
