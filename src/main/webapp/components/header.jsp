@@ -1,5 +1,5 @@
 
-<%@page import="com.mysql.cj.xdevapi.*"%>
+<%@page import="com.mysql.cj.xdevapi.JsonParser"%>
 <%@page import="netscape.javascript.JSObject"%>
 <%@page import="java.util.Date"%>
 <%@page import="Model.Address"%>
@@ -27,6 +27,8 @@
 
 </head>
 <body>
+
+
 	<%
 	String[] path = request.getRequestURI().split("/");
 	int lastIndex = path.length - 1;
@@ -41,8 +43,6 @@
 
 	User user = (User) session.getAttribute("user");
 	%>
-
-	
 	<nav
 		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
 		style="position: fixed; top: 0; left: 0; right: 0; height: 84px; z-index: 5"

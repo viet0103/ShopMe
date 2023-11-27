@@ -12,7 +12,6 @@ public class Application implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent sce) {
 		// TODO Auto-generated method stub
 		new DBConnection();
-		System.out.println("run");
 	}
 	
 	@Override

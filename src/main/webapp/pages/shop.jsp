@@ -7,7 +7,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Untree.co">
-<link rel="shortcut icon" href="${pageContext.request.contextPath }/assets/images/favicon.png">
+<link rel="shortcut icon" href="<%=request.getContextPath()%>/assets/images/favicon.png">
 
 <meta name="description" content="" />
 <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -17,8 +17,8 @@
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 	rel="stylesheet">
-<link href="${pageContext.request.contextPath }/assets/css/tiny-slider.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath }/assets/css/page.css?version=1" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/assets/css/tiny-slider.css" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/assets/css/page.css?version=1" rel="stylesheet">
 <title>Furni Free Bootstrap 5 Template for Furniture and
 	Interior Design Websites by Untree.co</title>
 </head>
@@ -342,11 +342,11 @@
 				<!-- Start Column 1 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="${pageContext.request.contextPath }/assets/images/product-3.png"
+						src="<%=request.getContextPath()%>/assets/images/product-3.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3> <strong
 						class="product-price">$50.00</strong> <span class="icon-cross">
-							<img src="${pageContext.request.contextPath }/assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -355,11 +355,11 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="${pageContext.request.contextPath }/assets/images/product-6.png"
+						src="<%=request.getContextPath()%>/assets/images/product-6.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3> <strong
 						class="product-price">$50.00</strong> <span class="icon-cross">
-							<img src="${pageContext.request.contextPath }/assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -368,11 +368,11 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="${pageContext.request.contextPath }/assets/images/product-2.png"
+						src="<%=request.getContextPath()%>/assets/images/product-2.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Kruzo Aero Chair</h3> <strong
 						class="product-price">$78.00</strong> <span class="icon-cross">
-							<img src="${pageContext.request.contextPath }/assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -381,11 +381,11 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="${pageContext.request.contextPath }/assets/images/product-3.png"
+						src="<%=request.getContextPath()%>/assets/images/product-3.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Ergonomic Chair</h3> <strong
 						class="product-price">$43.00</strong> <span class="icon-cross">
-							<img src="${pageContext.request.contextPath }/assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -395,11 +395,11 @@
 				<!-- Start Column 1 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="${pageContext.request.contextPath }/assets/images/product-3.png"
+						src="<%=request.getContextPath()%>/assets/images/product-3.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3> <strong
 						class="product-price">$50.00</strong> <span class="icon-cross">
-							<img src="${pageContext.request.contextPath }/assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -408,11 +408,11 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="${pageContext.request.contextPath }/assets/images/product-1.png"
+						src="<%=request.getContextPath()%>/assets/images/product-1.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3> <strong
 						class="product-price">$50.00</strong> <span class="icon-cross">
-							<img src="${pageContext.request.contextPath }/assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -421,11 +421,11 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="${pageContext.request.contextPath }/assets/images/product-2.png"
+						src="<%=request.getContextPath()%>/assets/images/product-2.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Kruzo Aero Chair</h3> <strong
 						class="product-price">$78.00</strong> <span class="icon-cross">
-							<img src="${pageContext.request.contextPath }/assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -434,11 +434,11 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-6 col-lg-4 mb-5">
 					<a class="product-item" href="#"> <img
-						src="${pageContext.request.contextPath }/assets/images/product-3.png"
+						src="<%=request.getContextPath()%>/assets/images/product-3.png"
 						class="img-fluid product-thumbnail">
 						<h3 class="product-title">Ergonomic Chair</h3> <strong
 						class="product-price">$43.00</strong> <span class="icon-cross">
-							<img src="${pageContext.request.contextPath }/assets/images/cross.svg" class="img-fluid">
+							<img src="<%=request.getContextPath()%>/assets/images/cross.svg" class="img-fluid">
 					</span>
 					</a>
 				</div>
@@ -454,9 +454,9 @@
 	<!-- End Footer Section -->
 
 
-	<script src="${pageContext.request.contextPath }/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="${pageContext.request.contextPath }/assets/js/tiny-slider.js"></script>
-	<script src="${pageContext.request.contextPath }/assets/js/custom.js"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/tiny-slider.js"></script>
+	<script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
 	<script type="text/javascript">
 	const selected = document.querySelector(".selected");
 	const optionsContainer = document.querySelector(".options-container");

@@ -16,7 +16,7 @@ public class CountRowSQL {
 			while(result.next()) {
 				row++;
 			}
-			result.beforeFirst();// Chuyển cursor trước đầu hàng
+			result.beforeFirst();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

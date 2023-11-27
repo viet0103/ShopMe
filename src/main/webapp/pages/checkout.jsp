@@ -6,16 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="${pageContext.request.contextPath }/assets/images/favicon.png">
+  <link rel="shortcut icon" href="<%=request.getContextPath()%>/assets/images/favicon.png">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
 
 		<!-- Bootstrap CSS -->
-		<link href="${pageContext.request.contextPath }/assets/css/bootstrap.min.css/?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css/?version=1" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-		<link href="${pageContext.request.contextPath }/assets/css/tiny-slider.css/?version=1" rel="stylesheet">
-		<link href="${pageContext.request.contextPath }/assets/css/page.css/?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/tiny-slider.css/?version=1" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/assets/css/page.css/?version=1" rel="stylesheet">
 		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
 	</head>
 
@@ -315,9 +315,9 @@
 		<!-- End Footer Section -->	
 
 
-		<script src="${pageContext.request.contextPath }/assets/js/bootstrap.bundle.min.js"></script>
-		<script src="${pageContext.request.contextPath }/assets/js/tiny-slider.js"></script>
-		<script src="${pageContext.request.contextPath }/assets/js/custom.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/bootstrap.bundle.min.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/tiny-slider.js"></script>
+		<script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
 	</body>
 
 </html>

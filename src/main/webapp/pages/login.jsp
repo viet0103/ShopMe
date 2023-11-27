@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,39 +23,28 @@
 	String password = (String) request.getAttribute("password");
 	String register_status = (String) session.getAttribute("register_status");
 	%>
-	<c:set var="product_id" value="${param.id }"/>
+
 
 	<input  type="hidden" id="status" value=<%=status%> />
 	<input type="hidden" id="register_status" value=<%=register_status%> />
 	<div class="main">
+
 		<!-- Sing in  Form -->
 		<section class="sign-in">
 			<div class="container">
 				<div class="signin-content">
 					<div class="signin-image">
 						<figure>
-							<img src="${pageContext.request.contextPath }/assets/images/signin-image.jpg" alt="sing up image">
+							<img src="<%= request.getContextPath() %>/assets/images/signin-image.jpg" alt="sing up image">
 						</figure>
-						<a href="${pageContext.request.contextPath }/register" class="signup-image-link">Create an
+						<a href="<%=request.getContextPath() %>/register" class="signup-image-link">Create an
 							account</a>
 					</div>
 
 					<div class="signin-form">
 						<h2 class="form-title">Sign in</h2>
-						<!-- Check login -->
-						<c:choose>
-							<c:when test="${not empty product_id }">
-								<c:set var="check_cmt_login" value="${pageContext.request.contextPath }/login?id=${product_id }"></c:set>
-							</c:when>
-							<c:otherwise>
-								<c:set var="check_cmt_login" value="${pageContext.request.contextPath }/login"></c:set>
-							</c:otherwise>
-						</c:choose>
-						<form method="post" action="${check_cmt_login }" class="register-form"
+						<form method="post" action="<%=request.getContextPath()%>/login" class="register-form"
 							id="login-form">
-							<input type="hidden" value="${requestScope.product_id }" name="product_id" >
-							<input type="hidden" value="${requestScope.rating }" name="rating" >
-							<input type="hidden" value="${requestScope.content_comment }" name="content_comment" >
 							<div class="form-group">
 								<label for="username"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input onblur='handleOnBlur(this)' onfocus="handleOnFocus(this)"

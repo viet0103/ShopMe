@@ -7,8 +7,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import Database.DBConnection;
-
 /**
  * Servlet implementation class ProductDetail
  */
@@ -29,9 +27,8 @@ public class ProductDetail extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String id = request.getParameter("id");
-		request.setAttribute("product_id", id);
-		request.getRequestDispatcher("/pages/shopDetail.jsp").forward(request, response);
+		request.setAttribute("product-id", request.getParameter("id"));
+		request.getRequestDispatcher("/pages/shopDetail.jsp").forward(request, response);;
 	}
 
 	/**
@@ -40,8 +37,6 @@ public class ProductDetail extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		
 	}
-	
 
 }
