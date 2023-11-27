@@ -76,6 +76,9 @@ public class User {
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
+	public String getFullname() {
+		return firstName + " " + lastName;
+	}
 
 	@Override
 	public int hashCode() {
